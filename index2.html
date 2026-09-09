@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>コンコンゲームセンター</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont,
+                     "Hiragino Kaku Gothic ProN",
+                     "Yu Gothic", sans-serif;
+
+        background: linear-gradient(135deg, #fff7d6, #e8f7ff);
+        text-align: center;
+        color: #333;
+    }
+
+    .container {
+        width: min(92vw, 600px);
+        margin: 0 auto;
+        padding: 35px 0 50px;
+    }
+
+    h1 {
+        font-size: clamp(28px, 8vw, 42px);
+        margin: 10px 0 5px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+        color: #666;
+    }
+
+    .games {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .game {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+        background: white;
+        border-radius: 22px;
+        padding: 22px 20px;
+
+        box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+        transition: transform 0.15s;
+    }
+
+    .game:active {
+        transform: scale(0.96);
+    }
+
+    .icon {
+        font-size: 48px;
+        margin-bottom: 5px;
+    }
+
+    .game-title {
+        font-size: 23px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #777;
+    }
+
+    .coming {
+        opacity: 0.55;
+    }
+
+    footer {
+        margin-top: 40px;
+        font-size: 12px;
+        color: #999;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 コンコンゲームセンター</h1>
+
+    <div class="subtitle">
+        つくったゲームであそぼう！
+    </div>
+
+    <div class="games">
+
+        <!-- サイコロ -->
+        <a class="game" href="games/dice/">
+            <div class="icon">🎲</div>
+            <div class="game-title">サイコロ</div>
+            <div class="description">
+                サイコロを振ってみよう！
+            </div>
+        </a>
+
+        <!-- ○×ゲーム -->
+        <a class="game" href="games/marubatsu/">
+            <div class="icon">⭕️❌</div>
+            <div class="game-title">⭕️❌ ゲームデラックス</div>
+            <div class="description">
+                めざせ！3つそろえ！
+            </div>
+        </a>
+
+        <!-- 準備中 -->
+        <div class="game coming">
+            <div class="icon">🈶</div>
+            <div class="game-title">漢字クイズ</div>
+            <div class="description">
+                🚧 準備中！
+            </div>
+        </div>
+
+        <div class="game coming">
+            <div class="icon">🗾</div>
+            <div class="game-title">都道府県クイズ</div>
+            <div class="description">
+                🚧 準備中！
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © コンコンゲームセンター
+    </footer>
+
+</div>
+
+</body>
+</html>
